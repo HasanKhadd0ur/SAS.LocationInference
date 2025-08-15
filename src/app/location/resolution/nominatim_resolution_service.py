@@ -40,7 +40,7 @@ class NominatimResolutionService(IResolutionService):
                     "limit": 1
                 }
                 try:
-                    sleep(4)  # rate limit / delay
+                    sleep(1)  # rate limit / delay
                     response = requests.get(url, params=params, headers=headers)
                     response.raise_for_status()
                     results = response.json()
